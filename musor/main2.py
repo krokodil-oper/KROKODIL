@@ -8,7 +8,6 @@ employees = [
     {"name": "Владимир Ефимов", "salary": 52000} 
 ] 
  
- 
 print(list(filter(lambda x: x['salary'] > 50000, employees))) 
 print('\n') 
  
