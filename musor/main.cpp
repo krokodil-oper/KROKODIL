@@ -1,19 +1,18 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+
 using namespace std;
+
 int main() {
-int n, p = 0;
-cin >> n;
-vector<int> a;
-    for(int i = 0; i < n; i++){
-    int temp;
-    cin >> temp;
-    a.push_back(temp);
-}
-    for(int i = 0;i < n; i ++){
-        if(a[i] > 0){
-            p++;}
-        cout << p;
-    }
-  return 0;
-}
+    auto lam = [](int &n) {
+        return n % 2 == 0;
+    };
+    vector<int> numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+    int count = count_if(numbers.begin(), numbers.end(), lam);
+
+    cout << "Количество чётных чисел: " << count << endl;
+
+    return 0;
+} 

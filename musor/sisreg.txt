@@ -1,0 +1,30 @@
+создать систему регистрации на c++
+
+#invlude <regex>
+
+class Password {
+public:
+    void Sign(){
+    }
+    void vhod(){
+    }
+    boll isvalidemail(){
+    }
+    bool isValisPassword(){
+
+    }
+
+
+private:
+string email;
+string phone_number;
+string pass;
+
+
+
+}
+
+данные хранить база данных/txt фаил 
+дедлайн 21 марта
+хеширование паролей
+проверка наличия пользователей в базе данных с дальнейшим логином

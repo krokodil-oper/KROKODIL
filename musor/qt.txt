@@ -1,0 +1,30 @@
+void Login::on_pushButton_2_clicked() {
+    QString email = ui->lineEdit->text();
+    QString dataf = "email.txt";
+
+    QFile file(dataf);
+    if (file.open(QIODevice::Append  | QIODevice::Text)) {
+        QTextStream stream(&file);
+        stream << email << "\n";
+        file.close();
+        qDebug() << "Данные успешно записаны в файл: " << dataf;
+    } else {
+        qDebug() << "Ошибка: Не удалось открыть файл для записи: " << dataf;
+    }
+
+
+
+    QString password = ui->lineEdit_2->text();
+    QString passw = "password.txt";
+
+    QFile filee(passw);
+    if (filee.open(QIODevice::Append  | QIODevice::Text)) {
+        QTextStream stream(&filee);
+        stream << password << "\n";
+        file.close();
+        qDebug() << "Данные успешно записаны в файл: " << passw;
+    } else {
+        qDebug() << "Ошибка: Не удалось открыть файл для записи: " << passw;
+    }
+    
+}
